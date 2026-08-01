@@ -1,0 +1,17 @@
+# Julia
+/Manifest.toml.bak
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Notebook outputs written while working
+output/
+notebooks/output/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
