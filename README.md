@@ -3,7 +3,7 @@
 A hands-on walkthrough of phenomenological growth-model fitting for epidemic
 incidence data, built on [GrowthFit.jl](https://github.com/rajsubediresearch/GrowthFit.jl).
 
-Five notebooks, each self-contained, working with real outbreak data. No prior
+Six notebooks, each self-contained, working with real outbreak data. No prior
 Julia experience assumed — but you should be comfortable with the idea of
 fitting a curve to data and reading a confidence interval.
 
@@ -16,6 +16,7 @@ fitting a curve to data and reading a confidence interval.
 | 03 | [Uncertainty](notebooks/03_uncertainty.ipynb) | Parametric bootstrap; MAE, RMSE, 95% PI coverage, and WIS; why a model can win on error and lose on score |
 | 04 | [Identifiability](notebooks/04_identifiability.ipynb) | Why some parameters can't be pinned down even when the fit looks perfect |
 | 05 | [Forecasting](notebooks/05_forecasting.ipynb) | Short-term forecasts with prediction intervals; evaluating them honestly |
+| 06 | [Rolling windows](notebooks/06_rolling_windows.ipynb) | Fit and forecast week by week across the outbreak; which model you would have picked at the time, and why AICc cannot see a turning point |
 
 Work through them in order the first time — 03 assumes 02, and 04 explains
 something you'll have noticed in 03.
@@ -112,7 +113,7 @@ top right. This is the smoother option if you already use VS Code.
 
 ### 5. Threads (recommended)
 
-Notebooks 03 and 05 run their bootstraps in parallel. A Jupyter kernel does
+Notebooks 03, 05 and 06 run their bootstraps in parallel — 06 most heavily. A Jupyter kernel does
 **not** inherit `-t` from the command that started Jupyter — the thread count
 is baked into the kernel — so this needs a one-off setup:
 
